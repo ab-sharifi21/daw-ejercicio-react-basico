@@ -1,0 +1,147 @@
+:root {
+  --mainBackgroundColor: #252422;
+  --secondryBackgroundColor: rgba(64, 61, 57, 0.13);
+  --boxShadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --linkBgColor: #eb5e28;
+  --boxShadow1: 0px 4px 4px 0px #eaee34;
+  --boxShadow2: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mainBackgroundColor);
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  min-width: 50rem;
+  max-width: 72rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+
+header > a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--linkBgColor);
+}
+
+header > nav {
+  display: flex;
+  gap: 1rem;
+}
+
+header > nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--linkBgColor);
+  border-radius: 0.4rem;
+}
+
+
+header > nav > a:hover {
+  transform: translate(0, -3px);
+  box-shadow: var(--boxShadow1);
+}
+
+main {
+  background-color: var(--secondryBackgroundColor);
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+  box-shadow: var(--boxShadow2);
+  width: 100%;
+}
+
+main > section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main > section > article {
+  position: relative;
+}
+
+main > section > article > img {
+  width: 300px;
+  border-radius: 0.5rem;
+}
+
+main > section > article > p {
+  position: absolute;
+  padding: 1rem 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  bottom: 0.3rem;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+main > section > article > p:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+main > section.counter-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  color: white;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--linkBgColor);
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.btn:hover {
+  transform: translate(0, -3px);
+  box-shadow: var(--boxShadow1);
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.fav-img {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.btn-page-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: .7rem 1rem;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  border: 1px solid var(--linkBgColor);
+  border-radius: 0.4rem;
+}
